@@ -1,20 +1,69 @@
 /* Header styles */
 h1 {
-	color:rgb(234, 18, 25);
+	color:black;
 }
 
 /* List styles */
 ul {
-	list-style-type: none;
-	padding-left: 0px;
+	list-style-type: none; /*get rid of bullet points*/
+	padding-left: 0;
 }
-
 li {
 	display: inline-block;
-	margin-left: 20px;
-	margin-right: 30px;
+	width: 22%;
+	text-align: center;
+	margin-right: 3%;
+}
+li:last-child {
+	margin-right: 0;
+}
+/* links */
+a {
+	font-size: 20px
+}
+a.navigation:link {
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	display: block;
+	padding: 5px;
+}
+a.navigation:visited {
+	color: black;
+	background-color: white;
+}
+a.navigation:hover {
+	color: black;
+	background-color: #beffff;
+}
+a.navigation:active {
+	color: black;
+	background-color: #006E6E;
 }
 
-a {
-	font-size: 20px;
+/*These are for those links under images*/
+a.description {
+	font-family: 'Architects Daughter', cursive;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+a.description:link {
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	display: block;
+	padding: 5px;
+}
+a.description:visited {
+	color: black;
+	background-color: white;
+}
+a.description:hover {
+	color: black;
+	background-color: white;
+}
+a.description:active {
+	color: black;
+	background-color: white;
 }

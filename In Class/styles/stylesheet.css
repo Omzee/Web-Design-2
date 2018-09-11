@@ -3,3 +3,66 @@
 @import url("typography.css");
 /* Adding all things for page layout*/
 @import url("layout.css");
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+body {
+ font-family: Arial, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, 'sans-serif';
+	color: black;
+	font-size: 16px;
+	background-color: #beffff;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+#wrapper {
+	width: 90%;
+	max-width: 1209px;
+	background-color: #E5FFFF;
+	margin-left: auto;
+	margin-right: auto; /*this will center*/
+}
+/*header content*/
+#logo {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+nav {
+	font-family: 'Architects Daughter', cursive;
+	width: 666px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.about-picture {
+	width: 35%;
+	float: left;
+}
+.about-text {
+	display: inline-block;
+	width: 62%;
+	margin-left: 1%;
+	float: left;
+	padding: 1%
+}
+.featured-items {
+	margin-bottom: 10px;
+	height: 395px;
+}
+.featured-items:last-child {
+	margin-bottom: 0px;
+	height: 445px;
+}
+.product {
+	max-width: 100%;
+	width: 32%;
+	height: auto;
+	margin-right: 1.9%;
+	float: left;
+}
+.product:last-child {
+	max-width: 100%;
+	height: auto;
+	margin-right: 0px;
+	float: right;
+}
