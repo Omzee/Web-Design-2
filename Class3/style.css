@@ -1,7 +1,10 @@
 main {
     width: 960px;
-    margin: 0px auto;
-    background-color: lightskyblue;
+    margin: 0px auto
+}
+
+.fullcard-container {
+    background-color: cadetblue;
 }
 
 .fullcard {
@@ -24,33 +27,36 @@ main {
     clear: both;
 }
 
+.halfcard-container {
+    background-color: aquamarine;
+}
+
 .halfcard {
-    width: 30%
-}
-
-.halfcard:first-child{
-    float: left;
-    margin-right: 5%
-}
-
-.halfcard:nth-child(2){
+    width: 30%;
+    margin-right: 5%;
     float: left;
 }
 
-.halfcard:last-child{
-    float: right;
+.halfcard:nth-child(3){ 
+    margin-right: 0%;
 }
 
 .halfcard img{
     width: 100%;
 }
 
-.quartercard h1{
-    float: right;
+.quartercard-container{
+    background-color: coral;
 }
 
 .quartercard p{
     height: 30%;
     width: 50%;
     overflow: auto;
+    float: left;
+    margin-left: -46%;
+}
+
+.quartercard h1{
+    float: left;
 }
