@@ -1,0 +1,58 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 150%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    color: white;
+    background-color: red;
+    padding: 35px;
+    width: 5%;
+    text-align: center;
+}
+
+li.home {
+    position: relative;
+    left: 400px;
+} 
+
+li.products {
+    position: relative;
+    left: 500px;
+} 
+
+li.about {
+    position: relative;
+    left: 600px;
+} 
+
+li.contact {
+    position: relative;
+    left: 700px;
+} 
+
+nav {
+    background-color: black;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+main {
+    margin-top: 186px;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+}
+
+#timecube {
+    width: 50%;
+}
