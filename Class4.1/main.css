@@ -42,14 +42,12 @@ nav {
 }
 
 main {
-    position: relative;
     top: -8px;
     margin-left: auto;
     margin-right: auto;
 }
 
 h1 {
-    position: absolute;
     width: 40%;
     background-color: red;
     top: 154px;
@@ -61,14 +59,25 @@ img {
 }
 
 #timecube {
-    position: fixed;
     width: 15%;
     left: 8%;
 }
 
 #reptoid {
-    position: fixed;
     width: 15%;
     right: 8%;
 }
 
+/* positions */
+
+.fixed-position {
+    position: fixed;
+}
+
+.absolute-position {
+    position: absolute;
+}
+
+.relative-position {
+    position: relative;
+}
