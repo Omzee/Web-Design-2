@@ -1,0 +1,47 @@
+.content {
+    position: relative;
+}
+
+.clm1 {
+    background-color: #2196F3;
+    position: absolute;
+    width: 25%;
+}
+
+.clm2 {
+    background-color: #f81b1b;
+    position: absolute;
+    width: 25%;
+    left: 25%;
+}
+
+.clm3 {
+    background-color: #4CAF50;
+    position: absolute;
+    width: 25%;
+    left: 50%;
+}
+
+.clm4 {
+    background-color: rgb(243, 212, 33);
+    position: absolute;
+    width: 25%;
+    left: 75%;
+}
+
+@media screen and (max-width: 768px) {
+
+.clm1, .clm2 {
+    width: 50%;
+    font-size: 150%;
+}
+
+.clm2 {
+    left: 50%;
+}
+
+    .clm3, .clm4 {
+    display: none;
+}
+
+}
