@@ -1,17 +1,14 @@
 main {
     width: 960px;
-    margin: 0px auto
-}
-
-.fullcard-container {
-    background-color: cadetblue;
+    margin: 0px auto;
+    background-color: chartreuse;
 }
 
 .fullcard {
-    width: 45%
+    width: 45%;
 }
 
-.fullcard:first-child{
+.fullcard:first-child {
     float: left;
 }
 
@@ -20,43 +17,9 @@ main {
 }
 
 .fullcard img {
-    width: 100%
+    width: 100%;
 }
 
 .clearfix {
     clear: both;
-}
-
-.halfcard-container {
-    background-color: aquamarine;
-}
-
-.halfcard {
-    width: 30%;
-    margin-right: 5%;
-    float: left;
-}
-
-.halfcard:nth-child(3){ 
-    margin-right: 0%;
-}
-
-.halfcard img{
-    width: 100%;
-}
-
-.quartercard-container{
-    background-color: coral;
-}
-
-.quartercard p{
-    height: 30%;
-    width: 50%;
-    overflow: auto;
-    float: left;
-    margin-left: -46%;
-}
-
-.quartercard h1{
-    float: left;
 }
