@@ -31,6 +31,7 @@ footer {
 	clear: both;
 	background-color: #FFF8DC;
 	color: cornsilk;
+	padding: .1%;
 }
 /*header content*/
 #logo {
@@ -41,21 +42,22 @@ footer {
 }
 nav {
 	font-family: 'Architects Daughter', cursive;
-	width: 666px;
+	letter-spacing: 1px;
+	width: 669px;
 	margin-left: auto;
 	margin-right: auto;
 }
-/*about page*/
-.about-picture {
+/*home page*/
+.home-picture {
 	width: 35%;
 	float: left;
 }
-.about-text {
+.home-text {
 	display: inline-block;
 	width: 62%;
 	margin-left: 1%;
 	float: left;
-	padding: 1%
+	padding-left: 1%;
 }
 .details-picture {
 	width: 35%;
@@ -66,15 +68,16 @@ nav {
 	width: 62%;
 	margin-left: 1%;
 	float: left;
-	padding: 1%
+	padding-left: 1%;
 }
 .featured-items {
 	margin-bottom: 20px;
 	height: 395px;
 }
 p {
-	padding: 2% 2%;
+	margin: 0px;
 }
+
 /* .featured-items:last-child {
 	margin-bottom: 0px;
 	height: 395px;
@@ -101,7 +104,7 @@ li {
 	display: inline-block;
 	width: 22%;
 	text-align: center;
-	margin-right: 3%;
+	margin-right: 2%;
 }
 li:last-child {
 	margin-right: 0;
@@ -141,7 +144,7 @@ a.footer:active {
 	color: #4A99C5;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 .product {
 	width: 100%;
 	margin: auto;
@@ -172,11 +175,11 @@ nav {
 	width: 90%;
 	margin: auto;
 }
-.about-picture {
+.home-picture {
 	width: 100%;
 	margin-bottom: 10px
 }
-.about-text {
+.home-text {
 	display: inline-block;
 	width: 98%;
 	margin: 0 auto 10px auto;
