@@ -48,6 +48,9 @@ nav {
 	margin-right: auto;
 }
 /*home page*/
+.home-card {
+	background-color: #603912;
+}
 .home-picture {
 	width: 35%;
 	float: left;
@@ -76,6 +79,27 @@ nav {
 }
 p {
 	margin: 0px;
+    margin-block-end: 1em;
+	margin-block-start: 0em;
+	text-align: left;
+}
+
+/* blog page */
+.blog-column {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.blog-img {
+	margin-block-end: 1em;
+}
+
+.blog {
+	background-color: #603912;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
 }
 
 /* .featured-items:last-child {
