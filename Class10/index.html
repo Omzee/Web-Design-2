@@ -7,50 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <style>
-        #message{
-            color: red;
+        h1 {
+            display: block;
+        }
+        button {
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <h1 id="docHeader">Hello, World!</h1>
+    <button onclick="toggleHeader()">Toggle Header!</button>
 
-    <div class="button-container">
-        <button onclick="showHeader()" id="showButton">Show Header!</button>
-        <button onclick="hideHeader()" id="hideButton">Hide Header!</button>
-    </div>
+    <h1 id="docHeader">
+    Hello, World!
+    </h1>
 
-    <p id="message"></p>
+    <button onclick="togglePet()">Cat // Dog</button>
+
+    <img id="pet" src="https://i.imgur.com/Npn0z8w.png" alt="dog" width="398">
 
     <script>
-        var header = document.getElementById("docHeader");
+        function toggleHeader() {
+            var header = document.getElementById("docHeader");
 
-        function showHeader(){
-            console.log(header.style.visibility);            
-            document.getElementById("message").innerText = "";
-            document.getElementById("hideButton").removeAttribute("disabled");
-
-            if(header.style.visibility === "visible"){
-                document.getElementById("showButton").setAttribute("disabled", "disabled");
-                console.log(document.getElementById("message"));
-                document.getElementById("message").innerText = "The header is already shown!";
+            if (header.style.visibility === "hidden") {
+                header.style.visibility = "visible";
+            } else {
+                header.style.visibility = "hidden";
             }
-            header.style.visibility = "visible";
-        }
 
-        function hideHeader(){
             console.log(header.style.visibility);
-            document.getElementById("showButton").removeAttribute("disabled");
-
-            if(header.style.visibility === "hidden"){
-                document.getElementById("hideButton").setAttribute("disabled", "disabled");
-                console.log(document.getElementById("message"));
-                document.getElementById("message").innerText = "The header is already hidden!";
-            }
-            header.style.visibility = "hidden";
         }
 
+        function togglePet() {
+            var pet = document.getElementById("pet");
+            if (pet.src == "https://i.imgur.com/Npn0z8w.png") {
+                pet.src = "https://i.imgur.com/drvA0ew.jpg";
+                pet.alt = "cat";
+            } 
+            else {
+                pet.src = "https://i.imgur.com/Npn0z8w.png";
+                pet.alt = "dog";
+            }
+
+            console.log(pet.alt);
+            }
     </script>
 
 </body>
