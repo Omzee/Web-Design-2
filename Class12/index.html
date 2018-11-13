@@ -50,36 +50,32 @@
             $('#togglePet').click(function(){
                 $('#pet').toggle(
                     function(){
-                        $('#pet').attr('src','https://i.imgur.com/Npn0z8w.png');
-                        $('#pet').attr('alt','dog');
+                        $(this).attr('src','https://i.imgur.com/Npn0z8w.png');
+                        $(this).attr('alt','dog');
                         console.log($('#pet').alt);
                         //console.log(pet.alt);
                     }, function(){
-                        $('#pet').attr('src','https://i.imgur.com/drvA0ew.jpg');
-                        $('#pet').attr('alt','cat');
+                        $(this).attr('src','https://i.imgur.com/drvA0ew.jpg');
+                        $(this).attr('alt','cat');
                         console.log($('#pet').alt);
                         //console.log(pet.alt);
                     }
                 );
-            });         
+            });    
+
+            $('#toggleSquare').click(function(){
+                $('#emotionSquare').toggle(
+                    function(){
+                        $('#emotionSquare').attr('innerHTML','ಠ_ಠ');
+                        $('#emotionSquare').attr('backgroundColor','pink');
+                    }, function(){
+                        $('#emotionSquare').attr('innerHTML','(◕‿◕✿)');
+                        $('#emotionSquare').attr('backgroundColor','lightblue');
+                    }
+                );
+            });
         });
-        
-
-            
-            
-        function toggleSquare() {
-            var sqr = document.getElementById("emotionSquare");
-
-            if (sqr.innerHTML == "(◕‿◕✿)") {
-                sqr.innerHTML = "ಠ_ಠ";
-                sqr.style.backgroundColor = "lightblue";
-            }
-            else {
-                sqr.innerHTML = "(◕‿◕✿)";
-                sqr.style.backgroundColor = "pink";
-            }
-            console.log(sqr.innerHTML);
-        }
+            //console.log(sqr.innerHTML);
     </script>
 
 </body>
