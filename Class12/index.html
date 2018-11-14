@@ -7,94 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <style>
-        h1 {
-            display: block;
-        }
-        button {
-            display: block;
-        }
-        #emotionSquare {
-            width: 50px;
-            height: 50px;
-            padding: 25px;
-            background-color: pink;
-        }
-    </style>
 </head>
 <body>
+    
+    <div class="button-container">
+        <button id="append">Append</button>
+        <button id="prepend">Prepend</button>
 
-    <button id="toggleHeader">Toggle Header!</button>
+        <button id="appendTo">Append To</button>
+        <button id="prependTo">Prepend To</button>
 
-    <h1 id="docHeader">
-    Dope Website!
-    </h1>
+        <button id="after">After</button>
+        <button id="before">Before</button>
 
-    <button id="togglePet">Dog // Cat</button>
-
-    <img id="pet" src="https://i.imgur.com/Npn0z8w.png" alt="dog" width="398">
-
-    <button id="toggleSquare">Square Emotion</button>
-
-    <div id="emotionSquare">
-    (◕‿◕✿)
+        <button id="remove">Remove All</button>
     </div>
+
+    <div class="box box1">
+    </div>
+
+    <div class="box box2">
+    </div>
+
     <script>
-        $(document).ready(function(){
-            $('#toggleHeader').click(function(){
-                $('#docHeader').toggle();
-                console.log($('#docHeader').style.visibility());
-                // console.log(header.style.visibility);
-            });
+        // ACTIONS
+        var appendAnElement = function(){
+            $('.box1').append("<h3>Hello, World!</h3>");
+        }
 
-            $('#togglePet').click(function(){
-                $('#pet').toggle();
+        var prependAnElement = function(){
+            $('.box1').prepend("<h3>I'm prepended!</h3>");
+        }
 
-                var dog = "https://i.imgur.com/Npn0z8w.png";
-                var cat = "https://i.imgur.com/drvA0ew.jpg";
+        var appendToAnElement = function(){
+            $("<h3>This is appended</h3>").appendTo('.box2');
+        }
 
-                console.log($('#pet').attr('src'));
+        var prependToAnElement = function(){
+            $("<h3>This is prepended</h3>").prependTo('.box2');
+        }
 
-                if( $('#pet').css('display') === 'none' ) {
-                    if($('#pet').attr('src') === dog){
-                        console.log("switch");
-                        $('#pet').attr('src', cat);
-                    }
-                    else {
-                        console.log("switch");
-                        $('#pet').attr('src', dog);
-                    }
-                    
-                }
+        var afterAnElement = function(){
+            $('.box').after("<h3>I'm after things!</h3>");
+        }
 
-                    // function(){
-                    //     $(this).attr('src','https://i.imgur.com/Npn0z8w.png');
-                    //     $(this).attr('alt','dog');
-                    //     console.log($('#pet').alt);
-                    //     //console.log(pet.alt);
-                    // }, function(){
-                    //     $(this).attr('src','https://i.imgur.com/drvA0ew.jpg');
-                    //     $(this).attr('alt','cat');
-                    //     console.log($('#pet').alt);
-                    //     //console.log(pet.alt);
-                    // }
-                
-            });    
+        var beforeAnElement = function(){
+            $('.box').before("<h3>I'm before things!</h3>");
+        }
 
-            $('#toggleSquare').click(function(){
-                $('#emotionSquare').toggle(
-                    function(){
-                        $('#emotionSquare').attr('innerHTML','ಠ_ಠ');
-                        $('#emotionSquare').attr('backgroundColor','pink');
-                    }, function(){
-                        $('#emotionSquare').attr('innerHTML','(◕‿◕✿)');
-                        $('#emotionSquare').attr('backgroundColor','lightblue');
-                    }
-                );
-            });
+        var removeThemAll = function(){
+            $('h3').remove();
+        }
+
+        // EVENTS
+        $('#append').click(function(){
+            appendAnElement();
         });
-            //console.log(sqr.innerHTML);
-    </script>
 
+        $('#prepend').click(function(){
+            prependAnElement();
+        });
+        
+        $('#appendto').click(function(){
+            appendToAnElement();
+        });
+
+        $('#prependto').click(function(){
+            prependToAnElement();
+        });
+
+        $('#after').click(function(){
+            afterAnElement();
+        });
+
+        $('#before').click(function(){
+            beforeAnElement();
+        });
+
+        $('button').click(function(evnt){
+            console.log($(evnt.target).attr('id'));
+
+            var thisID = $(evnt.target).attr('id');
+
+            thisID + AnElement();
+        })
+
+        $('#remove').click(function(){
+            removeThemAll();
+        });
+    </script>
 </body>
 </html>

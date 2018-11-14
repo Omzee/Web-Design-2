@@ -7,37 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+        h1 {
+            display: block;
+        }
+        button {
+            display: block;
+        }
+        #emotionSquare {
+            width: 50px;
+            height: 50px;
+            padding: 25px;
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="button-container">
-        <button id="imgToggle"></button>
+
+    <button id="toggleHeader">Toggle Header!</button>
+
+    <h1 id="docHeader">
+    Dope Website!
+    </h1>
+
+    <button id="togglePet">Dog // Cat</button>
+
+    <img id="pet" src="https://i.imgur.com/Npn0z8w.png" alt="dog" width="398">
+
+    <button id="toggleSquare">Square Emotion</button>
+
+    <div id="emotionSquare">
+    (◕‿◕✿)
     </div>
-
-    <h1>This is a Quokka!</h1>
-
-    <img
-    src="https://cdn.newsapi.com.au/image/v1/c4763839b968e520f2ec2ee6e3f9fa50?w"
-    alt="Quokka" width="650" class="page-img">
-
     <script>
         $(document).ready(function(){
-            // var imgQuokka = document.getElementsByClassName('page-img')[0];
-            // imgQuokka.style.display = "none";
+            $('#toggleHeader').click(function(){
+                $('#docHeader').toggle();
+                console.log($('#docHeader').style.visibility());
+                // console.log(header.style.visibility);
+            });
 
-            $('.page-img').hide();
+            $('#togglePet').click(function(){
+                $('#pet').toggle();
 
-            // var buttonToggle = document.getElementById("imgToggle");
-            // buttonToggle.innerText = "Show the Image";
+                var dog = "https://i.imgur.com/Npn0z8w.png";
+                var cat = "https://i.imgur.com/drvA0ew.jpg";
 
-            $('#imgToggle').text("Show the Image");
+                console.log($('#pet').attr('src'));
 
-            $('#imgToggle').click(
-                $('.page-img').show()
-            )
+                if( $('#pet').css('display') === 'none' ) {
+                    if($('#pet').attr('src') === dog){
+                        console.log("switch");
+                        $('#pet').attr('src', cat);
+                    }
+                    else {
+                        console.log("switch");
+                        $('#pet').attr('src', dog);
+                    }
+                    
+                }
+
+                    // function(){
+                    //     $(this).attr('src','https://i.imgur.com/Npn0z8w.png');
+                    //     $(this).attr('alt','dog');
+                    //     console.log($('#pet').alt);
+                    //     //console.log(pet.alt);
+                    // }, function(){
+                    //     $(this).attr('src','https://i.imgur.com/drvA0ew.jpg');
+                    //     $(this).attr('alt','cat');
+                    //     console.log($('#pet').alt);
+                    //     //console.log(pet.alt);
+                    // }
                 
-            console.log($('#imgToggle').text());
+            });    
+
+            $('#toggleSquare').click(function(){
+                $('#emotionSquare').toggle(
+                    function(){
+                        $('#emotionSquare').attr('innerHTML','ಠ_ಠ');
+                        $('#emotionSquare').attr('backgroundColor','pink');
+                    }, function(){
+                        $('#emotionSquare').attr('innerHTML','(◕‿◕✿)');
+                        $('#emotionSquare').attr('backgroundColor','lightblue');
+                    }
+                );
+            });
         });
+            //console.log(sqr.innerHTML);
     </script>
+
 </body>
 </html>

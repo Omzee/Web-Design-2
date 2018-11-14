@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    
+    <div class="button-container">
+        <button id="imgToggle"></button>
+    </div>
+
+    <h1>This is a Quokka!</h1>
+
+    <img
+    src="https://cdn.newsapi.com.au/image/v1/c4763839b968e520f2ec2ee6e3f9fa50?w"
+    alt="Quokka" width="650" class="page-img">
+
+    <script>
+        $(document).ready(function(){
+            // var imgQuokka = document.getElementsByClassName('page-img')[0];
+            // imgQuokka.style.display = "none";
+
+            $('.page-img').hide();
+
+            // var buttonToggle = document.getElementById("imgToggle");
+            // buttonToggle.innerText = "Show the Image";
+
+            $('#imgToggle').text("Show the Image");
+
+            $('#imgToggle').click(
+                $('.page-img').show()
+            )
+                
+            console.log($('#imgToggle').text());
+        });
+    </script>
+</body>
+</html>
