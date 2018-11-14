@@ -48,19 +48,37 @@
             });
 
             $('#togglePet').click(function(){
-                $('#pet').toggle(
-                    function(){
-                        $(this).attr('src','https://i.imgur.com/Npn0z8w.png');
-                        $(this).attr('alt','dog');
-                        console.log($('#pet').alt);
-                        //console.log(pet.alt);
-                    }, function(){
-                        $(this).attr('src','https://i.imgur.com/drvA0ew.jpg');
-                        $(this).attr('alt','cat');
-                        console.log($('#pet').alt);
-                        //console.log(pet.alt);
+                $('#pet').toggle();
+
+                var dog = "https://i.imgur.com/Npn0z8w.png";
+                var cat = "https://i.imgur.com/drvA0ew.jpg";
+
+                console.log($('#pet').attr('src'));
+
+                if( $('#pet').css('display') === 'none' ) {
+                    if($('#pet').attr('src') === dog){
+                        console.log("switch");
+                        $('#pet').attr('src', cat);
                     }
-                );
+                    else {
+                        console.log("switch");
+                        $('#pet').attr('src', dog);
+                    }
+                    
+                }
+
+                    // function(){
+                    //     $(this).attr('src','https://i.imgur.com/Npn0z8w.png');
+                    //     $(this).attr('alt','dog');
+                    //     console.log($('#pet').alt);
+                    //     //console.log(pet.alt);
+                    // }, function(){
+                    //     $(this).attr('src','https://i.imgur.com/drvA0ew.jpg');
+                    //     $(this).attr('alt','cat');
+                    //     console.log($('#pet').alt);
+                    //     //console.log(pet.alt);
+                    // }
+                
             });    
 
             $('#toggleSquare').click(function(){
