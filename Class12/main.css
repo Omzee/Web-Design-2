@@ -1,12 +1,33 @@
-.box {
-    min-width: 400px;
-    min-height: 200px;
+body {
+    background-color: pink;
 }
-
-.box1 {
-    background-color: lightgreen;
+.row {
+	margin-bottom: 100px;
 }
-
-.box2 {
-    background-color: thistle;
+.dog {
+    max-width: 100%;
+    width: 32%;
+	height: auto;
+	margin-right: 1%;
+	float: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.profile {
+	max-width: 100%;
+	width: 32%;
+	height: auto;
+	margin-right: 1.9%;
+	float: left;
+}
+.profile:nth-last-child(2) {
+	max-width: 100%;
+	height: auto;
+	margin-right: 0px;
+	float: right;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

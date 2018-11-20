@@ -1,90 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Run Away From Dog Simulator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+
 <body>
-    
     <div class="button-container">
-        <button id="append">Append</button>
-        <button id="prepend">Prepend</button>
-
-        <button id="appendTo">Append To</button>
-        <button id="prependTo">Prepend To</button>
-
-        <button id="after">After</button>
-        <button id="before">Before</button>
-
-        <button id="remove">Remove All</button>
+        <button id="prepend">Dog Appear</button>
+        <button id="after">Run Away from Dog</button>
+        <button id="empty">Everyone Gone</button>
     </div>
 
-    <div class="box box1">
+    <div class="row row1">
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="clearfix"></div>
     </div>
-
-    <div class="box box2">
+    <div class="row row2">
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row3">
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="profile"><img src="media/jojomzee.jpg" alt="serious"></div>
+        <div class="clearfix"></div>
     </div>
 
     <script>
         // ACTIONS
-        var appendAnElement = function(){
-            $('.box1').append("<h3>Hello, World!</h3>");
-        }
-
-        var prependAnElement = function(){
-            $('.box1').prepend("<h3>I'm prepended!</h3>");
-        }
-
-        var appendToAnElement = function(){
-            $("<h3>This is appended</h3>").appendTo('.box2');
-        }
-
-        var prependToAnElement = function(){
-            $("<h3>This is prepended</h3>").prependTo('.box2');
-        }
-
         var afterAnElement = function(){
-            $('.box').after("<h3>I'm after things!</h3>");
+            $('.dog').after('<img class="profile" src="media/running.jpg" alt="running">');
         }
 
-        var beforeAnElement = function(){
-            $('.box').before("<h3>I'm before things!</h3>");
+        var prependAnElement = function () {
+            $('.row1').prepend('<img class="dog" src="media/pete.png" alt="dog">');
         }
 
-        var removeThemAll = function(){
-            $('h3').remove();
+        var emptyAnElement = function () {
+            $('.row').empty();
         }
 
         // EVENTS
-        $('#append').click(function(){
-            appendAnElement();
-        });
-
-        $('#prepend').click(function(){
-            prependAnElement();
-        });
-        
-        $('#appendto').click(function(){
-            appendToAnElement();
-        });
-
-        $('#prependto').click(function(){
-            prependToAnElement();
-        });
-
         $('#after').click(function(){
             afterAnElement();
         });
 
-        $('#before').click(function(){
-            beforeAnElement();
+        $('#prepend').click(function () {
+            prependAnElement();
         });
 
-        $('button').click(function(evnt){
+        $('#empty').click(function () {
+            emptyAnElement();
+        });
+
+        $('button').click(function (evnt) {
             console.log($(evnt.target).attr('id'));
 
             var thisID = $(evnt.target).attr('id');
@@ -92,9 +71,7 @@
             thisID + AnElement();
         })
 
-        $('#remove').click(function(){
-            removeThemAll();
-        });
     </script>
 </body>
+
 </html>
