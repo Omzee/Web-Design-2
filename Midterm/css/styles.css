@@ -5,7 +5,7 @@
 body {
  font-family: Arial, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, 'sans-serif'; color: #FFFFFF;
 	font-size: 16px;
-	background-color: #C57F4B;
+	background-color: #fab279;
 }
 img {
 	max-width: 100%;
@@ -14,7 +14,6 @@ img {
 #wrapper {
 	width: 90%;
 	max-width: 1209px;
-	background-color: #c57f4b;
 	margin-left: auto;
 	margin-right: auto;
 }
